@@ -1,0 +1,131 @@
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width: 768px) {
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and(min-width: 767px) and (max-width: 1199px) {
+    &__item:nth-child(2n) {
+      margin-right: 0;
+    }
+    &__item:nth-last-child(-n + 1) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and(min-width: 1200px) {
+    &__item {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+  }
+  @media screen and(min-width: 1200px) {
+    &__item:nth-child(3n) {
+      margin-right: 0px;
+    }
+    &__item:nth-last-child(-n + 3) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__meta {
+    padding: 20px 24px 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: 0px;
+  }
+  &__overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--color-white-color);
+    background: rgba(33, 150, 243, 0.9);
+    transform: translateY(101%);
+
+    transition: transform var(--color-hover-animation),
+      transition-duration var(--color-hover-animation);
+
+    @media screen and (min-width: 768px) {
+      padding: 49px 24px 77px 24px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 63px 24px;
+    }
+  }
+  &__item:hover .card-set__text {
+    transform: translatey(0);
+    opacity: 1;
+  }
+  &__link {
+    display: block;
+    overflow: hidden;
+    transition: box-shadow var(--color-hover-animation);
+  }
+  &__link:hover,
+  &__link:focus {
+    box-shadow: var(--color-shadow-card);
+  }
+  & a {
+    text-decoration: none;
+  }
+  &__name {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    color: var(--color-primary);
+    letter-spacing: 0.03em;
+    font-size: 18px;
+    line-height: 2;
+    text-decoration: none;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      letter-spacing: 0.06em;
+    }
+  }
+  &__paragraph {
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    color: var(--color-icon);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.7;
+      letter-spacing: 0.03em;
+      color: var(--color-icon);
+    }
+  }
+  &__paragraph-one {
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    color: var(--color-icon);
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      margin-bottom: 36px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.7;
+      letter-spacing: 0.03em;
+      color: var(--color-icon);
+    }
+  }
+}

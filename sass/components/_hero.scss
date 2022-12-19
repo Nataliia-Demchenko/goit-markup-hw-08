@@ -1,0 +1,74 @@
+.hero {
+  background-color: var(--color-background);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 118px 0;
+
+  &__canvas {
+    align-items: center;
+    padding: 118px 0;
+    background-image: var(--hero-overlay), url(../images/header-mobile-450.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: var(--hero-overlay), url(../images/header-mobile-900.jpg);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__canvas {
+      background-image: var(--hero-overlay), url(../images/header-tablet-354.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: var(--hero-overlay), url(../images/header-tablet-708.jpg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 200px 0;
+      max-width: 1600px;
+      background-image: var(--hero-overlay), url(../images/header-desktop-1600.jpg);
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: var(--hero-overlay), url(../images/header-desktop-3200.jpg);
+      }
+    }
+  }
+
+  &__title {
+    color: var(--color-white-color);
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6;
+    max-width: 360px;
+    margin: 0 auto 30px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+      max-width: 696px;
+    }
+  }
+}

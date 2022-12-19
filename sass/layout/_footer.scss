@@ -1,0 +1,119 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--color-background);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+
+  &__position {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: center;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      gap: 60px 165px;
+    }
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: initial;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--color-white-color);
+  }
+
+  &__slogo {
+    color: var(--color-thirdary);
+  }
+  &__adresse-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1;
+    transition: color var(--color-hover-animation);
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: var(--color-thirdary);
+    }
+  }
+  // &__adresse-list {
+
+  // }
+  &__adresse-list .footer__adresse-item {
+    margin-bottom: 9px;
+  }
+  &__adresse-item:nth-last-child(-n + 1) {
+    margin-bottom: 0px;
+  }
+  &__location-link {
+    color: var(--color-white-color);
+    text-decoration: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    outline: none;
+    letter-spacing: 0.03em;
+    &:hover,
+    &:focus {
+      color: var(--color-thirdary);
+    }
+  }
+  &__social-position {
+    @media screen and (min-width: 1200px) {
+      padding-left: 10px;
+    }
+  }
+  &__social-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--color-hover-animation);
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-thirdary);
+    }
+
+    &:hover .net-icon,
+    &:focus .net-icon {
+      fill: var(--color-white-color);
+    }
+  }
+  &__icon {
+    fill: var(--color-white-color);
+  }
+
+  &__invitation {
+    @extend .subscribe-form__title;
+  }
+}
